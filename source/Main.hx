@@ -40,12 +40,14 @@ import sys.io.Process;
 #end
 class Main extends Sprite
 {
+	#if !android
 	// These are taken from Funkin' 0.3.2
 	public static var VERSION(get, never):String;
 	public static final VERSION_SUFFIX:String = #if !PUBLIC_BUILD ' DEV' #else '' #end;
 	public static final GIT_BRANCH:String = funkin.util.macro.GitCommit.getGitBranch();
 	public static final GIT_HASH:String = funkin.util.macro.GitCommit.getGitCommitHash();
 	public static final GIT_HAS_LOCAL_CHANGES:Bool = funkin.util.macro.GitCommit.getGitHasLocalChanges();
+	#end
 
 	public static final MIN_FRAMERATE:Int = 60;
 	public static final MAX_FRAMERATE:Int = 360;
@@ -118,7 +120,6 @@ class Main extends Sprite
 		ClientPrefs.loadDefaultKeys();
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, framerate, framerate, skipSplash, startFullscreen));
 
-		#if !mobile
 		fpsVar = new FPSDisplay(10, 3, 0xFFFFFF);
 		addChild(fpsVar);
 		Lib.current.stage.align = "tl";
@@ -126,7 +127,6 @@ class Main extends Sprite
 		if(fpsVar != null) {
 			fpsVar.visible = ClientPrefs.showFPS;
 		}
-		#end
 
 		#if html5
 		FlxG.autoPause = false;

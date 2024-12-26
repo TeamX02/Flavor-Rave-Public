@@ -11,20 +11,10 @@ import flixel.math.FlxRect;
 import flixel.util.FlxColor;
 import flixel.util.FlxDestroyUtil;
 import haxe.Json;
-import openfl.Assets;
 import openfl.display.BitmapData;
 import openfl.geom.Rectangle;
 
 using StringTools;
-#if desktop
-import sys.FileSystem;
-import sys.io.File;
-#else
-import js.html.File;
-import js.html.FileSystem;
-#elseif android
-import openfl.utils.Assets;
-#end
 
 class AtlasFrameMaker extends FlxFramesCollection
 {

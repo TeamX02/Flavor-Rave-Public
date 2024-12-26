@@ -1,6 +1,6 @@
 package funkin.util.macro;
 
-#if !display
+#if !android
 class GitCommit
 {
   /**

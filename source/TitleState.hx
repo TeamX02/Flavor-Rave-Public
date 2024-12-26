@@ -81,7 +81,7 @@ class TitleState extends MusicBeatState
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 
-		#if LUA_ALLOWED
+		#if MODS_ALLOWED
 		Paths.pushGlobalMods();
 		#end
 

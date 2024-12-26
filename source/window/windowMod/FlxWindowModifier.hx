@@ -1,5 +1,5 @@
 package window.windowMod;
-
+#if windows
 import flixel.FlxG;
 import flixel.util.FlxColor;
 import lime.ui.Window;
@@ -109,4 +109,5 @@ class TransparencyFunc
 		return res;
 	}
 }
+#end
 #end

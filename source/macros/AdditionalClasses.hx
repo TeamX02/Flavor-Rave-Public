@@ -1,6 +1,6 @@
 package macros;
 
-#if macro
+#if !android
 import haxe.macro.Compiler;
 
 /**
