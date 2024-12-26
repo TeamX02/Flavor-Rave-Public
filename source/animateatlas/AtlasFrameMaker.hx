@@ -22,6 +22,8 @@ import sys.io.File;
 #else
 import js.html.File;
 import js.html.FileSystem;
+#elseif android
+import openfl.utils.Assets;
 #end
 
 class AtlasFrameMaker extends FlxFramesCollection
