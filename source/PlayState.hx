@@ -507,7 +507,7 @@ class PlayState extends MusicBeatState
 
 			if (rawJson == null)
 			{
-				#if sys
+				#if desktop
 				rawJson = File.getContent(Paths.json(SONG.id + '/meta')).trim();
 				#else
 				rawJson = Assets.getText(Paths.json(SONG.id + '/meta')).trim();

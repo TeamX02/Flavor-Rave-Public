@@ -424,23 +424,9 @@ class Paths
 		var gottenPath:String = getPath('$path/$key.$SOUND_EXT', SOUND, library);
 		gottenPath = gottenPath.substring(gottenPath.indexOf(':') + 1, gottenPath.length);
 		// trace(gottenPath);
-		if(!currentTrackedSounds.exists(gottenPath))
-		#if MODS_ALLOWED
-		{
-			if(async) Sound.loadFromFile('./$gottenPath').onComplete(sound -> {currentTrackedSounds.set(gottenPath, sound);});
-			else currentTrackedSounds.set(gottenPath, Sound.fromFile('./$gottenPath'));
-		}
-		#else
-		{
-			var folder:String = '';
-			if(path == 'songs') folder = 'songs:';
-
-			var soundPath:String = folder + getPath('$path/$key.$SOUND_EXT', SOUND, library);
-			if(async) OpenFlAssets.loadSound(soundPath).onComplete(sound -> {currentTrackedSounds.set(gottenPath, sound);})
-			else currentTrackedSounds.set(gottenPath, OpenFlAssets.getSound(soundPath));
-		}
-		#end
-		if(!localTrackedAssets.contains(gottenPath)) localTrackedAssets.push(gottenPath);
+		if (!currentTrackedSounds.exists(gottenPath))
+			currentTrackedSounds.set(gottenPath, Sound.fromFile(gottenPath));
+		localTrackedAssets.push(key);
 		return currentTrackedSounds.get(gottenPath);
 	}
 

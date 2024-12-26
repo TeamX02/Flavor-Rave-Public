@@ -75,8 +75,7 @@
 		{
 			"name": "linc_luajit",
 			"type": "git",
-			"ref": "bcb4254e057f8a20710e2cd0985086370d57ecd1",
-			"url": "https://github.com/nebulazorua/linc_luajit.git"
+			"url": "https://github.com/superpowers04/linc_luajit.git"
 		}
 	]
 }
