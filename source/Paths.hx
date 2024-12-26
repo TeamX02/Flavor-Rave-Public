@@ -206,7 +206,7 @@ class Paths
 			return file;
 		}
 		#end
-		return 'assets/videos/$key.$extension';
+		return Asset2File.getPath('assets/videos/$key.$extension');
 	}
 
 	static public function sound(key:String, ?async:Bool = false, ?library:String):Sound
