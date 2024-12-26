@@ -136,7 +136,7 @@ class TitleState extends MusicBeatState
 		}
 		#end
 
-		#if sys
+		#if desktop
 		if (!initialized && (Argument.parse(Sys.args()) || Argument.parseDefine()))
 		{
 			initialized = true;

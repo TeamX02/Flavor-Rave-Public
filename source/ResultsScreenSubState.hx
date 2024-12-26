@@ -22,6 +22,7 @@ import flixel.util.FlxTimer;
 import haxe.Exception;
 import openfl.display.BitmapData;
 import openfl.geom.Matrix;
+import openfl.utils.Assets;
 import haxe.Json;
 
 using StringTools;

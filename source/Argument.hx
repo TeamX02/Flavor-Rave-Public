@@ -1,4 +1,4 @@
-#if sys
+#if desktop
 package;
 
 import editors.*;

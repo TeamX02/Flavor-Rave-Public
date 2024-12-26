@@ -63,12 +63,11 @@ class Main extends Sprite
 
 	public static var instance:Main;
 
-	#if !PUBLIC_BUILD
+	#if !android
 	static function get_VERSION():String
 	{
 	  return 'v${FlxG.stage.application.meta.get('version')} (${GIT_BRANCH} : ${GIT_HASH}${GIT_HAS_LOCAL_CHANGES ? ' : MODIFIED' : ''})' + VERSION_SUFFIX;
 	}
-	#else
 	static function get_VERSION():String
 	{
 	  return 'v${FlxG.stage.application.meta.get('version')}' + VERSION_SUFFIX;

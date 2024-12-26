@@ -1,5 +1,5 @@
 package options;
-
+#if MODS_ALLOWED
 #if discord_rpc
 import Discord.DiscordClient;
 #end
@@ -787,3 +787,4 @@ class ModMetadata
 		}
 	}
 }
+#end

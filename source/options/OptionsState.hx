@@ -62,8 +62,10 @@ class OptionsState extends MusicBeatState
 				openSubState(new GameplaySettingsSubState());
 			case 'Adjust Delay and Combo':
 				MusicBeatState.switchState(new NoteOffsetState());
+				#if MODS_ALLOWED
 			case 'Mods':
 				MusicBeatState.switchState(new ModsMenuState());
+				#end
 		}
 	}
 

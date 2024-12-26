@@ -2618,6 +2618,7 @@ class FunkinLua {
 			return Assets.exists(Paths.getPath('assets/$filename', TEXT));
 			#end
 		});
+		#if MODS_ALLOWED
 		Lua_helper.add_callback(lua, "saveFile", function(path:String, content:String, ?absolute:Bool = false)
 		{
 			try {
@@ -2658,6 +2659,7 @@ class FunkinLua {
 			}
 			return false;
 		});
+		#end
 		Lua_helper.add_callback(lua, "getTextFromFile", function(path:String, ?ignoreModFolders:Bool = false) {
 			return Paths.getTextFromFile(path, ignoreModFolders);
 		});
@@ -2950,6 +2952,7 @@ class FunkinLua {
 	}
 	#end
 	
+	#if MODS_ALLOWED
 	function initLuaShader(name:String, ?glslVersion:Int = 120)
 	{
 		if(!ClientPrefs.shaders) return false;
@@ -3005,6 +3008,7 @@ class FunkinLua {
 		#end
 		return false;
 	}
+	#end
 
 	function getGroupStuff(leArray:Dynamic, variable:String) {
 		var killMe:Array<String> = variable.split('.');

@@ -157,14 +157,6 @@
 	<haxedef name="HXCPP_CHECK_POINTER" if="CRASH_HANDLER" />
 	<haxedef name="HXCPP_STACK_LINE" if="CRASH_HANDLER" />
 
-	<haxeflag name="--macro" value="macros.AdditionalClasses.add()" />
-	<haxeflag name="-dce no" />
-
-	<!-- _________________________________ Custom _______________________________ -->
-
-	<!-- Swiping this from Funkin v0.3.2 -->
-	<haxeflag name="--macro" value="include('funkin.util.macro')" />
-
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
 	
 	<icon path="art/icon16.png" size='16'/>
