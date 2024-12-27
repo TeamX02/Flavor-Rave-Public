@@ -180,7 +180,7 @@ class EditorLua {
 			}
 		});
 
-		#if discord_rpc
+		#if desktop
 		Discord.DiscordClient.addLuaCallbacks(lua);
 		#end
 
